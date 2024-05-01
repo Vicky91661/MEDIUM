@@ -7,6 +7,8 @@ frontend/node_modules
 backend/.wrangler
 backend/wrangler.toml
 backend/.dev.vars
+backend/package-lock.json
+
 
 frontend/logs
 frontend/*.log
