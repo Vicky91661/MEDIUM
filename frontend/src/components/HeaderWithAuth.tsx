@@ -2,7 +2,10 @@ import { IoIosSearch } from "react-icons/io";
 import { CiBellOn } from "react-icons/ci";
 import { PiNotePencilThin } from "react-icons/pi";
 import medium_log from "./../assets/medium_logo.svg"
+import { useLocation } from "react-router-dom";
 function HeaderWithAuth() {
+    const path = useLocation().pathname;
+    console.log(path)
   return (
     <div className='px-10 py-2 flex justify-between'>
         <div className="flex items-center gap-5 ">
@@ -15,10 +18,16 @@ function HeaderWithAuth() {
             
         </div>
         <div className='flex items-center gap-12'>
-            <div className='flex items-center gap-2 text-xl font-'>
-                <PiNotePencilThin className='text-3xl'/>
-                <p>Write</p>
-            </div>
+            {path==="/write"?
+                <div>
+                    <button className="bg-green-700 py-2 px-4 rounded-full text-white">Publish</button>   
+                </div> 
+                :
+                <div className='flex items-center gap-2 text-xl font-'>
+                    <PiNotePencilThin className='text-3xl'/>
+                    <p>Write</p>
+                </div>
+            }
             <div className='text-3xl'><CiBellOn /></div>
             <div>
                 <img className='rounded-full h-10' src="https://miro.medium.com/v2/resize:fill:64:64/0*9h8hzlS8ofZshdRK" alt="" />

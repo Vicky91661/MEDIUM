@@ -24,7 +24,6 @@ function App() {
           <Route path="/story" element={<Story/>}></Route>
           <Route path='/membership' element={<Membership/>}></Route>
           <Route path='/write' element={<Write/>}></Route>
-          <Route></Route>
         </Routes>
      </BrowserRouter>
     </>
